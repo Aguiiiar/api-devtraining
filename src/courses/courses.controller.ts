@@ -23,7 +23,7 @@ export class CoursesController {
   }
 
   @Get(':id')
-  public async findOne(@Param('id') id: string) {
+  public async findOne(@Param('id') id: number) {
     return this.coursesService.findOne(id);
   }
 
@@ -47,7 +47,7 @@ export class CoursesController {
   }
 
   @Delete(':id')
-  public async remove(@Param('id') id: string) {
+  public async remove(@Param('id') id: number) {
     return this.coursesService.remove(id);
   }
 }
